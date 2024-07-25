@@ -1,0 +1,20 @@
+meta {
+  name: getAllTasksWithFilter
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:3000/tasks?status=OPEN&search
+  body: none
+  auth: none
+}
+
+query {
+  status: OPEN
+  search: 
+}
+
+headers {
+  accessToken: {{accessToken}}
+}

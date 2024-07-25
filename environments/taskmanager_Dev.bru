@@ -1,0 +1,12 @@
+vars:secret [
+  username,
+  password
+]
+
+script:pre-request {
+  req.setHeader("Authorization", "{{accessToken}}");
+}
+
+script:post-response {
+  bru.setVar("token", res.body.accessToken);
+}

@@ -1,0 +1,15 @@
+meta {
+  name: deleteTaskById
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:3000/tasks/27ba1990-07ec-40e4-9375-af3b30512ffe
+  body: none
+  auth: none
+}
+
+headers {
+  accessToken: {{accessToken}}
+}

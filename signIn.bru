@@ -1,0 +1,33 @@
+meta {
+  name: signIn
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:3000/auth/signin
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  username: {{username}}
+  password: {{password}}
+}
+
+vars:post-response {
+  accessToken: res.body.accessToken
+}
+
+tests {
+  
+  tests: {
+    test("should be able to login", function() {
+      expect(res.status).to.equal(201);
+    });
+   
+    test("should receive the token", function() {
+      expect(res.body.accessToken).to.be.a('string');
+    });
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: getTaskById
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/tasks/{{id}}
+  body: formUrlEncoded
+  auth: none
+}
+
+vars:pre-request {
+  id: 2dadfee1-95ca-4b32-8594-ff3f6df906f0
+}
+
+headers {
+  accessToken: {{accessToken}}
+}

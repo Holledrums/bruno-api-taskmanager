@@ -1,0 +1,19 @@
+meta {
+  name: updateTaskById
+  type: http
+  seq: 6
+}
+
+patch {
+  url: http://localhost:3000/tasks/2dadfee1-95ca-4b32-8594-ff3f6df906f0/status
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  status: IN_PROGRESS
+}
+
+headers {
+  accessToken: {{accessToken}}
+}

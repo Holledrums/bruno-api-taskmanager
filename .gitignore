@@ -1,0 +1,8 @@
+# Node modules
+node_modules/
+
+# Editor-spezifische Dateien
+.vscode/
+
+# Environment variables
+.env

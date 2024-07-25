@@ -1,0 +1,22 @@
+meta {
+  name: createTask
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/tasks
+  body: formUrlEncoded
+  auth: none
+}
+
+headers {
+  accessToken: {{accessToken}}
+}
+
+body:form-urlencoded {
+  title: udemy course
+  description: it is nessesary
+  ~accessToken: {{accessToken}}
+}
+

@@ -1,0 +1,17 @@
+{
+  "version": "1",
+  "name": "TaskManager",
+  "type": "collection",
+  "proxy": {
+    "use": true,
+    "protocol": "http",
+    "hostname": "localhost",
+    "port": 3000,
+    "auth": {
+      "enabled": false,
+      "username": "",
+      "password": ""
+    },
+    "bypassProxy": ""
+  }
+}
