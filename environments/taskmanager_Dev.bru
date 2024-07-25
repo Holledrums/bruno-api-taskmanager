@@ -3,6 +3,7 @@ vars:secret [
   password
 ]
 
+
 script:pre-request {
   req.setHeader("Authorization", "{{accessToken}}");
 }
